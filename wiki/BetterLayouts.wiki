@@ -1,0 +1,12 @@
+#summary How to obtain better layouts and clusterings?
+#labels Featured
+
+= Layouts =
+
+  * *Use more iterations.*
+  * *Eliminate gravitation.*
+  * *Compute several layouts and choose the best.*
+
+= Clusterings =
+
+  * *Compute several clusterings and choose the best.*
