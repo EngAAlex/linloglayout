@@ -9,4 +9,4 @@
 
 = Clusterings =
 
-  * *Compute several clusterings and choose the best.* Unlike the layouter, the clusterer in !LinLogLayout is deterministic by default, i.e. produces the same clustering at each run (on the same graph).  However, it can be randomized by commenting in a line marked with "randomize contraction" in the class `OptimizerModularity`.  After commenting in this line, run !LinLogLayout several times and choose the clustering with the largest modularity.
+  * *Compute several clusterings and choose the best.* Unlike the layouter, the clusterer of !LinLogLayout is deterministic by default, i.e. produces the same clustering at each run (on the same graph).  However, it can be randomized by commenting in a line marked with "randomize contraction" in the class `OptimizerModularity`.  After commenting in this line, run !LinLogLayout several times and choose the clustering with the largest modularity.
