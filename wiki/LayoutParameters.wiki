@@ -1,4 +1,4 @@
-#summary How to choose parameters for the layouter classes `MinimizerBarnesHut` and `MinimizerClassic`
+#summary How to choose the parameters for the layouter classes `MinimizerBarnesHut` and `MinimizerClassic`?
 #labels Featured
 
 The constructors of the layouter classes `MinimizerBarnesHut` and `MinimizerClassic` have, besides the graph (network), three parameters controlling properties of the computed layouts: `repuExponent`, `attrExponent`, and `gravFactor`.  These parameters correspond to the three types of forces (energies) simulated for computing the layouts: pairwise repulsion between different nodes, pairwise attraction between adjacent nodes (i.e., nodes connected by an edge), and gravitation of each node to the barycenter of the layout.
