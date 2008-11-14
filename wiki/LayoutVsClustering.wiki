@@ -13,8 +13,6 @@ For example, in the world trade graph shown below, both the layout (node positio
 
 http://linloglayout.googlecode.com/svn/trunk/examples/WorldImport1999.png
 
-In fact, a the _k_ clusters of a clustering can be considered as positions in _(k-1)_-dimensional space, such that each pair of different clusters has the distance 1.  Then the Modularity measure for clusterings is a special case of energy models for layouts.  This explains why Modularity clusterings and !LinLog energy layouts (as computed by the tool !LinLogLayout) group the nodes similarly (provided that the layout has not much less dimensions than the clustering has clusters).  
-
-http://code.google.com/images/code_sm.png
+In fact, a the _k_ clusters of a clustering can be considered as positions in _(k-1)_-dimensional space, such that each pair of different clusters has the distance 1.  Then the Modularity measure for clusterings is a special case of energy models for layouts.  This explains why Modularity clusterings and !LinLog energy layouts (as computed by the tool !LinLogLayout) group the nodes similarly (provided that the layout has not much less dimensions than the clustering has clusters).
 
 More details about the relationship between (Modularity) clusterings and (!LinLog) layouts can be found in the article [http://arxiv.org/abs/0807.4052 Modularity Clustering is Force-Directed Layout] (Preprint arXiv:0807.4052, 2008).
