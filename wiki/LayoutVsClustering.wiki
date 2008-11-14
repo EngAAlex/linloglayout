@@ -3,9 +3,7 @@
 
 Layouts and clusterings can both naturally represent the density structure of graphs (community structure of networks), by placing densely connected vertices closely together or in the same cluster, and sparsely connected vertices further apart or in different clusters.
 
-Layouts and clusterings complement each other. On the one hand, only clusterings can
-  * explicitly partition the vertex set into subsets,
-  * represent inherently high-dimensional structures. (Layouts with more than 2 or 3 dimensions can be easily computed, but are difficult to understand for human viewers.)
+Layouts and clusterings complement each other. On the one hand, only clusterings can represent inherently high-dimensional structures. (Layouts with more than 2 or 3 dimensions can be easily computed, but are difficult to understand for human viewers.) 
 On the other hand, only layouts can show
   * the relationship between clusters, e.g., whether their separation is clear or fuzzy, and which vertices form their interface,
   * the internal structure of clusters, e.g., whether a dense cluster is composed of even denser subclusters,
