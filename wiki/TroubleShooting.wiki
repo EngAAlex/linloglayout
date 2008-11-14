@@ -28,6 +28,6 @@ Unfortunately, there is not detailed documentation of the algorithms.  `Minimize
   * A. J. Quigley and P. Eades. FADE: Graph drawing, clustering, and visual abstraction. In J. Marks, editor, _Proceedings of the 8th International Symposium on Graph Drawing (GD 2000)_, LNCS 1984, pages 197–210, Berlin, 2001. Springer-Verlag.
 
 Multi-level algorithms for Modularity clustering, of which `OptimizerModularity` is a simple example, are described in
-  * R. Rotta. [http://www.informatik.tu-cottbus.de/~rrotta/ _A Multi-Level Algorithm for Modularity Graph Clustering_]. Diploma thesis, Brandenburg University of Technology, 2008.
+  * R. Rotta. _[http://www.informatik.tu-cottbus.de/~rrotta/ A Multi-Level Algorithm for Modularity Graph Clustering]_. Diploma thesis, Brandenburg University of Technology, 2008.
 
 *Further questions are welcome.*
