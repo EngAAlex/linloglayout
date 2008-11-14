@@ -3,18 +3,16 @@
 
 Layouts and clusterings can both naturally represent the density structure of graphs (community structure of networks), by placing densely connected vertices closely together or in the same cluster, and sparsely connected vertices further apart or in different clusters.
 
-Layouts and clusterings complement each other. On the one hand, only clusterings can represent inherently high-dimensional structures. (Layouts with more than 2 or 3 dimensions can be easily computed, but are difficult to understand for human viewers.) 
+Layouts and clusterings complement each other. On the one hand, only clusterings can faithfully represent inherently high-dimensional structures. (Layouts with more than 2 or 3 dimensions can be easily computed, but are difficult to understand for human viewers.) 
 On the other hand, only layouts can show
-  * the relationship between clusters, e.g., whether their separation is clear or fuzzy, and which vertices form their interface,
-  * the internal structure of clusters, e.g., whether a dense cluster is composed of even denser subclusters,
-  * the relationship between vertices and clusters, e.g., whether a vertex is central or peripheral to its cluster, or a cluster is closely related to several clusters.
-In particular, layouts have no fixed resolution, and thus no "resolution limit" as observed for clusterings by Fortunato and M. Barthelemy (Proc. Natl. Acad. Sci.
-U.S.A. 104:36, 2007).
+  * the relationship between clusters, e.g., whether their separation is clear or fuzzy, and which vertices form their interface;
+  * the internal structure of clusters, e.g., whether a dense cluster is composed of even denser subclusters; (layouts have no fixed resolution, and thus no "resolution limit", as observed for Modularity clusterings by Fortunato and Barthelemy, Proc. Natl. Acad. Sci. U.S.A. 104:36, 2007;)
+  * the relationship between vertices and clusters, e.g., whether a vertex is central or peripheral to its cluster, or whether a vertex is closely related to several clusters.
 
-For example, in the world trade graph (`examples\WorldImport1999.el`) shown below, both the layout (vertex positions) and the clustering (vertex colors) group the countries of the three major economic areas (East Asia / Australia, America, and Europe).  But only the layout reflects that countries like IRN and EGY are rather between the East Asian and the European group, and shows many smaller groups like CHN and HKG, AUS and NZL, GBR and IRL.
+For example, in the world trade graph shown below, both the layout (vertex positions) and the clustering (vertex colors) group the countries of the three major economic areas (East Asia / Australia, America, and Europe).  But only the layout reflects that countries like IRN and EGY are rather between the East Asian and the European group, and shows many smaller groups like CHN and HKG, AUS and NZL, and GBR and IRL.
 
 http://code.google.com/p/linloglayout/source/browse/#svn/trunk/example/WorldImport1999.png
 
-In fact, a clustering with _k_ clusters can be considered as a specific _(k-1)_-dimensional layout, where each pair of different clusters has the distance 1.  Then the Modularity measure for clusterings is a special case of an energy model for layouts.  This explains why the Modularity clusterings and !LinLog energy layouts group the vertices similarly (provided that the layout has not much less dimensions than the clustering has clusters).  
+In fact, a the _k_ clusters of a clustering can be considered as positions in _(k-1)_-dimensional space, such that each pair of different clusters has the distance 1.  Then the Modularity measure for clusterings is a special case of energy models for layouts.  This explains why Modularity clusterings and !LinLog energy layouts (as computed by the tool !LinLogLayout) group the vertices similarly (provided that the layout has not much less dimensions than the clustering has clusters).  
 
 More details about the relationship between (Modularity) clusterings and (!LinLog) layouts can be found in the article [http://arxiv.org/abs/0807.4052 Modularity Clustering is Force-Directed Layout] (Preprint arXiv:0807.4052, 2008).
