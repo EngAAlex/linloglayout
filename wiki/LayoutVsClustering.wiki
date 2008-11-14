@@ -1,6 +1,7 @@
 #summary Why layouts? Why clusterings? Why both together?
 #labels Featured
 
+A layout maps the nodes of a graph to positions in a plane (or a higher-dimensional space), while a clustering partion the set of nodes into disjoint subsets called clusters.
 Layouts and clusterings can both naturally represent the density structure of graphs (community structure of networks), by placing densely connected nodes closely together or in the same cluster, and sparsely connected nodes further apart or in different clusters.
 
 Layouts and clusterings complement each other. On the one hand, only clusterings can faithfully represent inherently high-dimensional structures. (Layouts with more than 2 or 3 dimensions can be easily computed, but are difficult to understand for human viewers.) 
@@ -13,6 +14,6 @@ For example, in the world trade graph shown below, both the layout (node positio
 
 http://linloglayout.googlecode.com/svn/trunk/examples/WorldImport1999.png
 
-In fact, a the _k_ clusters of a clustering can be considered as positions in _(k-1)_-dimensional space, such that each pair of different clusters has the distance 1.  Then the Modularity measure for clusterings is a special case of energy models for layouts.  This explains why Modularity clusterings and !LinLog energy layouts (as computed by the tool !LinLogLayout) group the nodes similarly (provided that the layout has not much less dimensions than the clustering has clusters).
+In fact, the _k_ clusters of a clustering can be considered as positions in _(k-1)_-dimensional space, such that each pair of different clusters has the distance 1.  Then the Modularity measure for clusterings is a special case of energy models for layouts.  This explains why Modularity clusterings and !LinLog energy layouts group the nodes similarly, as in the above screenshot.
 
 More details about the relationship between (Modularity) clusterings and (!LinLog) layouts can be found in the article [http://arxiv.org/abs/0807.4052 Modularity Clustering is Force-Directed Layout] (Preprint arXiv:0807.4052, 2008).
