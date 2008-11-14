@@ -1,0 +1,17 @@
+#summary How to choose parameters for the layouter classes `MinimizerBarnesHut` and `MinimizerClassic`
+
+The constructors of the layouter classes `MinimizerBarnesHut` and `MinimizerClassic` have, besides the graph (network), three parameters controlling properties of the computed layouts: `repuExponent`, `attrExponent`, and `gravFactor`.  These parameters correspond to the three types of forces (energies) simulated for computing the layouts: repulsion between each pair of different vertices, attraction between each pair of adjacent vertices (i.e., vertices connected by an edge), and gravitation of each vertex to the barycenter of the layout.
+
+`repuExponent` is technically the exponent of the distance in the repulsion energy.  (As an exception, the value 0.0 corresponds to logarithmic repulsion.)  It controls the uniformity of the vertex distances in the layout -- the smaller, the more uniform.  Typical values are 0.0 (as in the !LinLog energy model) or smaller.
+
+`attrExponent` is technically the exponent of the distance in the attraction energy.  It controls the uniformity of the edge lengths in the layout -- the greater, the more uniform.
+Typical values are 1.0 (as in the !LinLog energy model) or greater.
+
+If the difference `attrExponent-repuExponent` is 1 or only slightly larger than 1 (as in the !LinLog energy model), then the resulting layouts clearly show the density structure (community structure), by grouping densely connected vertices and separating sparsely connected vertices.  In most classical energy models, the difference is much greater than 1, e.g. `attrExponent==3.0` and `repuExponent==0.0` in the classic Fruchterman-Reingold energy model.  This distributes the vertices much more uniformly, and thus generally produces more readable layouts, which however reflect the density structure less clearly.
+
+`gravFactor` is technically the factor of the gravitation energy.  It controls how strongly each vertex is attracted to the barycenter; for example, a value of 1.0 means that its attractions to the barycenter is about as strong as its total attraction to all other vertices (which is usually much too strong).  Gravitation distorts the layout, and can be eliminated by setting the `gravFactor` to 0.0 -- but then, unconnected parts of the graph fly away into infinity.  If unsure whether the graph has unconnected components, try 0.1 or 0.05 first before 0.005 or 0.0.
+
+The parameters `repuExponent` and `attrExponent` are also mentioned in the articles 
+  * A. Noack. [http://jgaa.info/volume11.html Energy Models for Graph Clustering], _Journal of Graph Algorithms and Applications_, 11(2):453-480, 2007.
+  * A. Noack. [http://arxiv.org/abs/0807.4052 Modularity Clustering is Force-Directed Layout], Preprint arXiv:0807.4052, 2008.
+Unfortunately, the naming is not consistent: In Section 3.6 of the earlier article, the parameter _r_ of the _r_-PolyLog energy model corresponds to the `attrExponent`, the `repuExponent` is always 0.  Section III.A of the latter article provides a fairly detailed discussion of the exponents; its parameters _a_ and _r_ of the _(a,r)_-energy model correspond to `attrExponent`*-1* and `repuExponent`*-1*, respectively.
