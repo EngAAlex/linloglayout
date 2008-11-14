@@ -11,7 +11,7 @@ On the other hand, only layouts can show
 
 For example, in the world trade graph shown below, both the layout (vertex positions) and the clustering (vertex colors) group the countries of the three major economic areas (East Asia / Australia, America, and Europe).  But only the layout reflects that countries like IRN and EGY are rather between the East Asian and the European group, and shows many smaller groups like CHN and HKG, AUS and NZL, and GBR and IRL.
 
-http://code.google.com/p/linloglayout/source/browse/#svn/trunk/example/WorldImport1999.png
+http://code.google.com/p/linloglayout/source/browse/trunk/examples/WorldImport1999.png
 
 In fact, a the _k_ clusters of a clustering can be considered as positions in _(k-1)_-dimensional space, such that each pair of different clusters has the distance 1.  Then the Modularity measure for clusterings is a special case of energy models for layouts.  This explains why Modularity clusterings and !LinLog energy layouts (as computed by the tool !LinLogLayout) group the vertices similarly (provided that the layout has not much less dimensions than the clustering has clusters).  
 
