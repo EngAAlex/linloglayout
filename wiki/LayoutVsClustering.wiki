@@ -1,7 +1,7 @@
 #summary Why layouts? Why clusterings? Why both together?
 #labels Featured
 
-A layout maps the nodes of a graph to positions in a plane (or a higher-dimensional space), while a clustering partion the set of nodes into disjoint subsets called clusters.
+A layout maps the nodes of a graph to positions in a plane (or a higher-dimensional space), while a clustering partions the set of nodes into disjoint subsets called clusters.
 Layouts and clusterings can both naturally represent the density structure of graphs (community structure of networks), by placing densely connected nodes closely together or in the same cluster, and sparsely connected nodes further apart or in different clusters.
 
 Layouts and clusterings complement each other. On the one hand, only clusterings can faithfully represent inherently high-dimensional structures. (Layouts with more than 2 or 3 dimensions can be easily computed, but are difficult to understand for human viewers.) 
